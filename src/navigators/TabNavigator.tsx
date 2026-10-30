@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import Profile from '../app/(tabs)/profile';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../app/(tabs)/home';
@@ -20,7 +20,7 @@ const TabNavigator = () => {
         name="Workouts"
         component={Home}
         options={{
-          tabBarIcon: ({focused, color, size}) => (
+          tabBarIcon: ({focused}) => (
             <FontAwesome
               name="list"
               color={
@@ -36,7 +36,7 @@ const TabNavigator = () => {
         name="Exercises"
         component={Exercises}
         options={{
-          tabBarIcon: ({focused, color, size}) => (
+          tabBarIcon: ({focused}) => (
             <FontAwesome
               name="th-list"
               color={
@@ -53,7 +53,7 @@ const TabNavigator = () => {
         name="Profile"
         component={Profile}
         options={{
-          tabBarIcon: ({focused, color, size}) => (
+          tabBarIcon: ({focused}) => (
             <FontAwesome
               name="user"
               color={
